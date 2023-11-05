@@ -11,12 +11,14 @@
     smartWatch: T;
   }
 
-  const developer1: Developer<{
+  type AppleWatch = {
     brand: string;
     model: string;
     releaseYear: number;
     sleepTrack: boolean;
-  }> = {
+  };
+
+  const developer1: Developer<AppleWatch> = {
     name: "John",
     computer: {
       brand: "Apple",
@@ -25,17 +27,19 @@
     },
     smartWatch: {
       brand: "Apple",
-      model: "iPhone",
+      model: "iWatch",
       releaseYear: 2020,
       sleepTrack: true,
     },
   };
 
-  const developer2: Developer<{
+  type SamsungWatch = {
     brand: string;
     model: string;
     heartTrack: boolean;
-  }> = {
+  };
+
+  const developer2: Developer<SamsungWatch> = {
     name: "Michael",
     computer: {
       brand: "Samsung",
@@ -44,7 +48,7 @@
     },
     smartWatch: {
       brand: "Samsung",
-      model: "Galaxy",
+      model: "SuperWatch",
       heartTrack: true,
     },
   };
