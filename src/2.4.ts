@@ -1,7 +1,8 @@
 {
   // interface -> generic interface with dynamic data
 
-  interface Developer<T, X> {
+  interface Developer<T, X = null> {
+    //null will be default value if nothing is specified
     name: string;
     computer: {
       brand: string;
