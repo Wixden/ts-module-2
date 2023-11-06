@@ -49,4 +49,25 @@
   );
 
   //
+  const addCourseToStudent = <T>(student: T): T => {
+    const courses = ["Angular", "VUE JS", "Laravel", "Python", "JavaScript"];
+    return {
+      ...student,
+      courses,
+    };
+  };
+
+  const student1 = addCourseToStudent({
+    name: "Mr. Akhtar",
+    email: "akhtar@gmail.com",
+    devType: "Next Level Web Developer",
+  });
+
+  const student2 = addCourseToStudent({
+    name: "Mr. Hussain",
+    email: "hussain@gmail.com",
+    hasWatch: "Apple Watch",
+  });
+
+  //
 }
