@@ -59,5 +59,28 @@
   type Width = BoxSize["width"]; // Look up type
   type Depth = BoxSize["depth"]; // Look up type
 
+  // generic mapped types
+  type BoxSizeString2<T> = {
+    [key in keyof T]: T[key];
+  };
+
+  type BoxSizeDynamic = {
+    width: number;
+    height: number;
+    depth: string;
+    volume: string;
+    surfaceArea: boolean;
+  };
+
+  const boxSize4: BoxSizeString2<BoxSizeDynamic> = {
+    width: 50,
+    height: 60,
+    depth: "70 cm",
+    volume: "50 cm^3",
+    surfaceArea: false,
+  };
+
+  console.log({ boxSize4 });
+
   // ==============================================================
 }
