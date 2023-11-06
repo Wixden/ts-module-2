@@ -8,8 +8,16 @@
     bus: string;
     boat: string;
     plane: string;
-    train: string;
   }
+
+  // manual type input:
+  type Owner = "bike" | "car" | "truck" | "bus" | "boat" | "plane";
+
+  // keyof operator
+  type Owner2 = keyof Vehicles;
+
+  const person1: Owner = "plane";
+  const person2: Owner2 = "boat";
 
   //
 }
