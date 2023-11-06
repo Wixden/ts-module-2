@@ -34,5 +34,18 @@
 
   // person.name = "Mark"
 
+  // Record Type
+  type MyObject = Record<string, string>;
+
+  const myObject: MyObject = {
+    name: "John",
+    age: "30",
+    email: "john@gmail.com",
+    // phone: 1234567890, //error
+  };
+
+  // empty object
+  const EmptyObject: Record<string, unknown> = {};
+
   // ==============================================================
 }
