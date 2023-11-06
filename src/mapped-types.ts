@@ -54,5 +54,10 @@
 
   console.log({ boxSize1 }, { boxSize2 }, { boxSize3 });
 
+  // Look up type
+  type Height = BoxSize["height"]; // Look up type
+  type Width = BoxSize["width"]; // Look up type
+  type Depth = BoxSize["depth"]; // Look up type
+
   // ==============================================================
 }
