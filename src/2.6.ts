@@ -9,7 +9,7 @@
     email: string;
   }
 
-  // Forcing/constraining data types by using extends to make sure always pass the correct data types;
+  // Forcing/constraining data types by using extends to make sure always pass the specific data types compulsory and then other data types;
 
   const addCourseToStudent = <T extends Student>(student: T): T => {
     const courses = ["Angular", "VUE JS", "Laravel", "Python", "JavaScript"];
@@ -34,7 +34,8 @@
   });
 
   // Now it will show error for passing wrong information to the function:
-  const student3 = addCourseToStudent({ wrong: "Wrong" });
+
+  // const student3 = addCourseToStudent({ wrong: "Wrong" });
 
   // Type constraints
 }
