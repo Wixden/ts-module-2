@@ -24,5 +24,7 @@
     email: "akhtar@gmail.com",
   });
 
+  // tuple with generic function
+
   //
 }
