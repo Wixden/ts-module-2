@@ -1,7 +1,7 @@
 {
   // interface -> generic interface with dynamic data
 
-  interface Developer<T> {
+  interface Developer<T, X> {
     name: string;
     computer: {
       brand: string;
@@ -9,6 +9,7 @@
       releaseYear: number;
     };
     smartWatch: T;
+    bike?: X;
   }
 
   type AppleWatch = {
@@ -18,7 +19,7 @@
     sleepTrack: boolean;
   };
 
-  const developer1: Developer<AppleWatch> = {
+  const developer1: Developer<AppleWatch, null> = {
     name: "John",
     computer: {
       brand: "Apple",
@@ -33,13 +34,20 @@
     },
   };
 
-  type SamsungWatch = {
+  interface SamsungWatch {
     brand: string;
     model: string;
     heartTrack: boolean;
-  };
+  }
 
-  const developer2: Developer<SamsungWatch> = {
+  interface YamahaBike {
+    brand: string;
+    model: string;
+    engine: string;
+    price: number;
+  }
+
+  const developer2: Developer<SamsungWatch, YamahaBike> = {
     name: "Michael",
     computer: {
       brand: "Samsung",
@@ -50,6 +58,12 @@
       brand: "Samsung",
       model: "SuperWatch",
       heartTrack: true,
+    },
+    bike: {
+      brand: "Yamaha",
+      model: "R16",
+      engine: "400 CC",
+      price: 78500,
     },
   };
 
