@@ -19,5 +19,25 @@
   const person1: Owner = "plane";
   const person2: Owner2 = "boat";
 
+  const getPropertyValue = <X, Y extends keyof X>(obj: X, key: Y) => {
+    return obj[key];
+  };
+
+  const user = {
+    name: "Akhtar",
+    email: "akhtar@gmail.com",
+    phone: 987654321,
+  };
+
+  const car = {
+    name: "Honda",
+    color: "Blue",
+    year: 2020,
+  };
+
+  const result1 = getPropertyValue(user, "name");
+
+  const result2 = getPropertyValue(car, "color");
+
   //
 }
